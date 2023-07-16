@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,700;1,9..40,400&family=Dancing+Script&family=Montserrat:ital,wght@1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-body: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  --white: #fff;
+  --black: #000;
+  --primary-color: #34355b;
+  --bg-phrase: #e4edf1;
+  --bg-btn: #ff9500;
+  --box-shadow1: 0px 20px 50px 0px rgba(0, 0, 0, 0.8);
+  --box-shadow2: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-body);
+  display: grid;
+  place-items: center;
+  animation: gradient 2s ease infinite;
+}
+
+main {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow1);
+  padding: 3rem 4rem 4rem 4rem;
+  border-radius: 0.3125rem;
+  text-align: center;
+}
+
+main .screen1 h1,
+main .screen2 h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  max-width: 16.15706rem;
+  margin: auto;
+}
+
+main .screen1 p {
+  color: var(--primary-color);
+  font-family: 'DM Sans', sans-serif;
+  margin: 0.88rem 0 1.65rem;
+}
+
+main .lucky:hover {
+  animation: shake 0.15s linear infinite;
+  cursor: pointer;
+}
+
+main .screen2 h2 {
+  max-width: 18.5625rem;
+}
+
+main .screen2 .phrase {
+  background: var(--bg-phrase);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow2);
+  padding: 0.625rem;
+  max-width: 18.3125rem;
+  margin: 1.06rem auto 3rem;
+  animation: phrase 1s 0.2s linear forwards;
+}
+
+main .screen2 p {
+  color: var(--black);
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+}
+
+main .screen2 img {
+  display: block;
+}
+
+main .screen2 .open-again {
+  background: var(--bg-btn);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  color: var(--white);
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+main .screen2 .open-again:hover {
+  scale: 1.1;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(6px, 3px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes phrase {
+  0% {
+    transform: translateY(150px) scale(0.1);
+  }
+
+  50% {
+    transform: translateY(75px) scale(0.5);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  }
+
+  100% {
+    background: linear-gradient(45deg, #b0f 0%, #190361 100%);
+  }
+}
